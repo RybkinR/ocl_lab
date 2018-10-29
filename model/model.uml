@@ -36,7 +36,6 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_vqmooNqsEeiaAo5Je8AilQ" name="submissionDate" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_j0dqoNq4EeiaAo5Je8AilQ" name="homeworkregister" type="_PEQhMNqvEeiaAo5Je8AilQ" association="_j0ccgNq4EeiaAo5Je8AilQ"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_9QE_0NqsEeiaAo5Je8AilQ" name="getGrade">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_BINvANqtEeiaAo5Je8AilQ" type="_yK4w4NqoEeiaAo5Je8AilQ" direction="return"/>
     </ownedOperation>
@@ -165,6 +164,7 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_j0dDkdq4EeiaAo5Je8AilQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_j0dqodq4EeiaAo5Je8AilQ" name="answer" type="_XmSwgNqrEeiaAo5Je8AilQ" aggregation="shared" association="_j0ccgNq4EeiaAo5Je8AilQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_j0dqoNq4EeiaAo5Je8AilQ" name="homeworkregister" type="_PEQhMNqvEeiaAo5Je8AilQ" association="_j0ccgNq4EeiaAo5Je8AilQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_3V64ENq4EeiaAo5Je8AilQ" memberEnd="_3V7fItq4EeiaAo5Je8AilQ _3V8GMNq4EeiaAo5Je8AilQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3V7fINq4EeiaAo5Je8AilQ" source="org.eclipse.papyrus">
