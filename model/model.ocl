@@ -1,9 +1,0 @@
-import 'model.uml'
-
-context FirstAnswer
-inv expirationHW: self.submissionDate != Homework::dueDate() implies self.grade = Grade::zero
-
-context Redo
-inv defaultGrade: self.grade = Grade::minus
-
-endpackage

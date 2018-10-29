@@ -119,19 +119,25 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_dqOaINqxEeiaAo5Je8AilQ" name="FirstAnswer">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_oJ6MMNtNEei1g8j9dVEU8Q" name="dueDateConstraint">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_oKFyYNtNEei1g8j9dVEU8Q" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.submissionDate &lt;> self.homework.dueDate implies self.grade = Grade::zero</body>
+      </specification>
+    </ownedRule>
+    <generalization xmi:type="uml:Generalization" xmi:id="_jyRLoNtPEei1g8j9dVEU8Q" general="_XmSwgNqrEeiaAo5Je8AilQ"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_hSln8NqxEeiaAo5Je8AilQ" name="FirstAnswer">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_lKiJ4NqxEeiaAo5Je8AilQ" name="hw" type="_pk5EENqrEeiaAo5Je8AilQ"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_zK_z8NqxEeiaAo5Je8AilQ" type="_dqOaINqxEeiaAo5Je8AilQ" direction="return"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_meV7INqxEeiaAo5Je8AilQ" name="Redo">
+    <generalization xmi:type="uml:Generalization" xmi:id="_lClkANtPEei1g8j9dVEU8Q" general="_XmSwgNqrEeiaAo5Je8AilQ"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_oYmoYNqxEeiaAo5Je8AilQ" name="Redo">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_txdjcNqxEeiaAo5Je8AilQ" name="ans" type="_XmSwgNqrEeiaAo5Je8AilQ"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_wRi6kNqxEeiaAo5Je8AilQ" type="_meV7INqxEeiaAo5Je8AilQ" direction="return"/>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Realization" xmi:id="_UAfDQNqyEeiaAo5Je8AilQ" client="_meV7INqxEeiaAo5Je8AilQ" supplier="_XmSwgNqrEeiaAo5Je8AilQ"/>
-  <packagedElement xmi:type="uml:Realization" xmi:id="_VuVFINqyEeiaAo5Je8AilQ" client="_dqOaINqxEeiaAo5Je8AilQ" supplier="_XmSwgNqrEeiaAo5Je8AilQ"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_sAzPYNq3EeiaAo5Je8AilQ" memberEnd="_sAz2ctq3EeiaAo5Je8AilQ _sA0dgNq3EeiaAo5Je8AilQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sAz2cNq3EeiaAo5Je8AilQ" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sAz2cdq3EeiaAo5Je8AilQ" key="nature" value="UML_Nature"/>
