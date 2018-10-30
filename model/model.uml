@@ -13,7 +13,7 @@
     <ownedRule xmi:type="uml:Constraint" xmi:id="_TP1ewNw5EeicG4IsR_XOeg" name="deadBeatConstr">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_TP37ANw5EeicG4IsR_XOeg" name="constraintSpec">
         <language>OCL</language>
-        <body>if self.answer->select(x | x.grade = Grade::minus)->size() >= 2 then self.isDeadBeat = true else self.isDeadBeat = true endif</body>
+        <body>if self.answer->select(x | x.grade = Grade::minus)->size() >= 2 then self.isDeadBeat = true else self.isDeadBeat = false endif</body>
       </specification>
     </ownedRule>
     <ownedAttribute xmi:type="uml:Property" xmi:id="__KMDcNqpEeiaAo5Je8AilQ" name="isDeadBeat" visibility="private">
