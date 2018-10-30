@@ -119,10 +119,16 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_dqOaINqxEeiaAo5Je8AilQ" name="FirstAnswer">
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_oJ6MMNtNEei1g8j9dVEU8Q" name="dueDateConstraint">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_oJ6MMNtNEei1g8j9dVEU8Q" name="dueDateInequalityConstraint">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_oKFyYNtNEei1g8j9dVEU8Q" name="constraintSpec">
         <language>OCL</language>
         <body>self.submissionDate &lt;> self.homework.dueDate implies self.grade = Grade::zero</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_pgyqQNw3EeicG4IsR_XOeg" name="dueDateEqualityConstraint">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_pg4w4Nw3EeicG4IsR_XOeg" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.submissionDate = self.homework.dueDate implies self.grade &lt;> Grade::zero</body>
       </specification>
     </ownedRule>
     <generalization xmi:type="uml:Generalization" xmi:id="_jyRLoNtPEei1g8j9dVEU8Q" general="_XmSwgNqrEeiaAo5Je8AilQ"/>
@@ -132,6 +138,12 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_meV7INqxEeiaAo5Je8AilQ" name="Redo">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_Oik64Nw4EeicG4IsR_XOeg" name="firstAnswerConstraint">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_Oilh8Nw4EeicG4IsR_XOeg" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.firstanswer.grade = Grade::minus</body>
+      </specification>
+    </ownedRule>
     <generalization xmi:type="uml:Generalization" xmi:id="_lClkANtPEei1g8j9dVEU8Q" general="_XmSwgNqrEeiaAo5Je8AilQ"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_oYmoYNqxEeiaAo5Je8AilQ" name="Redo">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_txdjcNqxEeiaAo5Je8AilQ" name="ans" type="_XmSwgNqrEeiaAo5Je8AilQ"/>

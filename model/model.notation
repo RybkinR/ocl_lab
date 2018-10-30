@@ -334,6 +334,18 @@
     <element xmi:type="uml:Constraint" href="model.uml#_oJ6MMNtNEei1g8j9dVEU8Q"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oKI1sdtNEei1g8j9dVEU8Q" x="-140" y="760"/>
   </children>
+  <children xmi:type="notation:Shape" xmi:id="_pg70MNw3EeicG4IsR_XOeg" type="Constraint_PackagedElementShape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_phAFoNw3EeicG4IsR_XOeg" type="Constraint_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_phAFodw3EeicG4IsR_XOeg" type="Constraint_BodyLabel"/>
+    <element xmi:type="uml:Constraint" href="model.uml#_pgyqQNw3EeicG4IsR_XOeg"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pg70Mdw3EeicG4IsR_XOeg" x="-140" y="1060" width="560"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_OimJANw4EeicG4IsR_XOeg" type="Constraint_PackagedElementShape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_OimJAtw4EeicG4IsR_XOeg" type="Constraint_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_OimJA9w4EeicG4IsR_XOeg" type="Constraint_BodyLabel"/>
+    <element xmi:type="uml:Constraint" href="model.uml#_Oik64Nw4EeicG4IsR_XOeg"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OimJAdw4EeicG4IsR_XOeg" x="1281" y="983"/>
+  </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_Zs4J4dqoEeiaAo5Je8AilQ" name="diagram_compatibility_version" stringValue="1.4.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_Zs4J4tqoEeiaAo5Je8AilQ"/>
   <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_Zs4J49qoEeiaAo5Je8AilQ" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
@@ -556,5 +568,26 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lC-lkttPEei1g8j9dVEU8Q" points="[920, 940, -643984, -643984]$[660, 840, -643984, -643984]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lDuMcNtPEei1g8j9dVEU8Q" id="(0.2553191489361702,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lDuMcdtPEei1g8j9dVEU8Q" id="(0.498220640569395,0.994475138121547)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_p1B04Nw3EeicG4IsR_XOeg" type="Constraint_ContextEdge" source="_pg70MNw3EeicG4IsR_XOeg" target="_dqOaIdqxEeiaAo5Je8AilQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_p1B049w3EeicG4IsR_XOeg" type="Constraint_KeywordLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_qVOX4Nw3EeicG4IsR_XOeg" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_p1B05Nw3EeicG4IsR_XOeg" x="1" y="14"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_p1B04dw3EeicG4IsR_XOeg"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_p1B04tw3EeicG4IsR_XOeg" points="[0, 926, -643984, -643984]$[200, 980, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_p2TnQNw3EeicG4IsR_XOeg" id="(0.14285714285714285,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_p2TnQdw3EeicG4IsR_XOeg" id="(0.0,0.5769230769230769)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_O7me4Nw4EeicG4IsR_XOeg" type="Constraint_ContextEdge" source="_OimJANw4EeicG4IsR_XOeg" target="_meV7IdqxEeiaAo5Je8AilQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_O7me49w4EeicG4IsR_XOeg" type="Constraint_KeywordLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_O7me5Nw4EeicG4IsR_XOeg" y="15"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_O7me4dw4EeicG4IsR_XOeg"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_O7me4tw4EeicG4IsR_XOeg" points="[1281, 1000, -643984, -643984]$[1095, 980, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_O8blUNw4EeicG4IsR_XOeg" id="(0.0,0.2833333333333333)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_O8blUdw4EeicG4IsR_XOeg" id="(1.0,0.38461538461538464)"/>
   </edges>
 </notation:Diagram>
