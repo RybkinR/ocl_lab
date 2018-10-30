@@ -1,0 +1,17 @@
+import 'model.uml'
+
+package model
+context FirstAnswer
+inv dueDateConstr: if self.submissionDate <> self.homework.dueDate then self.grade = Grade::zero else self.grade <> Grade::zero endif
+
+context Redo
+inv firstAnswConstr: self.firstanswer.grade = Grade::minus
+
+context Student
+inv isDeadBeatConstr: if self.answer->select(x | x.grade = Grade::zero)->size() >= 2 then self.isDeadBeat = true else self.isDeadBeat = true endif
+
+context HomeworkRegister::postHW(hw:Homework)
+pre homeworkConstr: self.downloadHW(hw.getID()) <> hw
+post postHomeworkConstr: self.downloadHW(hw.getID()) = hw
+
+endpackage

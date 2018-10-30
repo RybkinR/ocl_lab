@@ -10,6 +10,12 @@
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="__v2KsNqoEeiaAo5Je8AilQ" name="plus"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_0pK7wNqpEeiaAo5Je8AilQ" name="Student">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_TP1ewNw5EeicG4IsR_XOeg" name="deadBeatConstr">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_TP37ANw5EeicG4IsR_XOeg" name="constraintSpec">
+        <language>OCL</language>
+        <body>if self.answer->select(x | x.grade = Grade::minus)->size() >= 2 then self.isDeadBeat = true else self.isDeadBeat = true endif</body>
+      </specification>
+    </ownedRule>
     <ownedAttribute xmi:type="uml:Property" xmi:id="__KMDcNqpEeiaAo5Je8AilQ" name="isDeadBeat" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
     </ownedAttribute>
@@ -21,7 +27,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_J6OCENqrEeiaAo5Je8AilQ" name="doHW">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_J6OCENqrEeiaAo5Je8AilQ" name="doHW" concurrency="concurrent">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_KxrZENqsEeiaAo5Je8AilQ" name="ans" type="_XmSwgNqrEeiaAo5Je8AilQ" direction="inout"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_PxxO0NqsEeiaAo5Je8AilQ" name="hw" type="_pk5EENqrEeiaAo5Je8AilQ"/>
     </ownedOperation>
@@ -88,6 +94,10 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_PEQhMNqvEeiaAo5Je8AilQ" name="HomeworkRegister">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_j0dqodq4EeiaAo5Je8AilQ" name="answer" type="_XmSwgNqrEeiaAo5Je8AilQ" aggregation="shared" association="_j0ccgNq4EeiaAo5Je8AilQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BMjGMNw-EeicG4IsR_XOeg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BMmwkNw-EeicG4IsR_XOeg" value="*"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_TScY4NqvEeiaAo5Je8AilQ" name="postHW">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_XXY1ANqvEeiaAo5Je8AilQ" name="hw" type="_pk5EENqrEeiaAo5Je8AilQ"/>
     </ownedOperation>
@@ -119,16 +129,10 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_dqOaINqxEeiaAo5Je8AilQ" name="FirstAnswer">
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_oJ6MMNtNEei1g8j9dVEU8Q" name="dueDateInequalityConstraint">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_oJ6MMNtNEei1g8j9dVEU8Q" name="dueDateConstraint">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_oKFyYNtNEei1g8j9dVEU8Q" name="constraintSpec">
         <language>OCL</language>
-        <body>self.submissionDate &lt;> self.homework.dueDate implies self.grade = Grade::zero</body>
-      </specification>
-    </ownedRule>
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_pgyqQNw3EeicG4IsR_XOeg" name="dueDateEqualityConstraint">
-      <specification xmi:type="uml:OpaqueExpression" xmi:id="_pg4w4Nw3EeicG4IsR_XOeg" name="constraintSpec">
-        <language>OCL</language>
-        <body>self.submissionDate = self.homework.dueDate implies self.grade &lt;> Grade::zero</body>
+        <body>if self.submissionDate &lt;> self.homework.dueDate then self.grade = Grade::zero else self.grade &lt;> Grade::zero endif</body>
       </specification>
     </ownedRule>
     <generalization xmi:type="uml:Generalization" xmi:id="_jyRLoNtPEei1g8j9dVEU8Q" general="_XmSwgNqrEeiaAo5Je8AilQ"/>
@@ -164,8 +168,8 @@
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MJoNANq4EeiaAo5Je8AilQ" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MJo0ENq4EeiaAo5Je8AilQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_MJo0Edq4EeiaAo5Je8AilQ" name="teacher" type="_ywkwgNqrEeiaAo5Je8AilQ" association="_MJnl8Nq4EeiaAo5Je8AilQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_MJo0Etq4EeiaAo5Je8AilQ" name="homework" type="_pk5EENqrEeiaAo5Je8AilQ" association="_MJnl8Nq4EeiaAo5Je8AilQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_MJo0Edq4EeiaAo5Je8AilQ" name="author" type="_ywkwgNqrEeiaAo5Je8AilQ" aggregation="shared" association="_MJnl8Nq4EeiaAo5Je8AilQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_MJo0Etq4EeiaAo5Je8AilQ" name="artifact" type="_pk5EENqrEeiaAo5Je8AilQ" association="_MJnl8Nq4EeiaAo5Je8AilQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_SjlYsNq4EeiaAo5Je8AilQ" memberEnd="_Sjl_wtq4EeiaAo5Je8AilQ _Sjmm0Nq4EeiaAo5Je8AilQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Sjl_wNq4EeiaAo5Je8AilQ" source="org.eclipse.papyrus">
@@ -181,15 +185,20 @@
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j0dDkNq4EeiaAo5Je8AilQ" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_j0dDkdq4EeiaAo5Je8AilQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_j0dqodq4EeiaAo5Je8AilQ" name="answer" type="_XmSwgNqrEeiaAo5Je8AilQ" aggregation="shared" association="_j0ccgNq4EeiaAo5Je8AilQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_j0dqoNq4EeiaAo5Je8AilQ" name="homeworkregister" type="_PEQhMNqvEeiaAo5Je8AilQ" association="_j0ccgNq4EeiaAo5Je8AilQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_3V64ENq4EeiaAo5Je8AilQ" memberEnd="_3V7fItq4EeiaAo5Je8AilQ _3V8GMNq4EeiaAo5Je8AilQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3V7fINq4EeiaAo5Je8AilQ" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3V7fIdq4EeiaAo5Je8AilQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_3V7fItq4EeiaAo5Je8AilQ" name="homework" type="_pk5EENqrEeiaAo5Je8AilQ" aggregation="shared" association="_3V64ENq4EeiaAo5Je8AilQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_3V8GMNq4EeiaAo5Je8AilQ" name="homeworkregister" type="_PEQhMNqvEeiaAo5Je8AilQ" association="_3V64ENq4EeiaAo5Je8AilQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3V7fItq4EeiaAo5Je8AilQ" name="homework" type="_pk5EENqrEeiaAo5Je8AilQ" aggregation="shared" association="_3V64ENq4EeiaAo5Je8AilQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_66_okNw9EeicG4IsR_XOeg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_67D6ANw9EeicG4IsR_XOeg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3V8GMNq4EeiaAo5Je8AilQ" name="homeworkregister" type="_PEQhMNqvEeiaAo5Je8AilQ" association="_3V64ENq4EeiaAo5Je8AilQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4mOJkNw9EeicG4IsR_XOeg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4mVeUNw9EeicG4IsR_XOeg" value="1"/>
+    </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_sK-QUNq9EeiaAo5Je8AilQ" memberEnd="_sLAFgtq9EeiaAo5Je8AilQ _sLAskNq9EeiaAo5Je8AilQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sLAFgNq9EeiaAo5Je8AilQ" source="org.eclipse.papyrus">
